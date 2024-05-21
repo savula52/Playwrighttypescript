@@ -15,10 +15,13 @@ test('launch github', async ({ page }) => {
   await page.locator('xpath= //*[@id="login"]/div[4]/form/div/input[13]').click()
   //await expect(page).toHaveURL('https://github.com/session')
 
-  //await page.locator('text='Create an account'').click
-
+   //locator using text - Click create new account
+  await page.locator('text=Create an account').click()
+  await expect(page).toHaveURL('https://github.com/signup?return_to=https%3A%2F%2Fgithub.com%2Flogin&source=login')
+  //await.page.locator('css=#login > div.login-callout.mt-3 > p > a').click()
+   await page.screenshot({ path: `gcreateaccount.png` })
   
-  await new Promise(() => {});
+  await new Promise(() => {})
   
 });
 
