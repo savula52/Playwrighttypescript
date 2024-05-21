@@ -21,7 +21,7 @@ test('launch github', async ({ page }) => {
   //await.page.locator('css=#login > div.login-callout.mt-3 > p > a').click()
    await page.screenshot({ path: `gcreateaccount.png` })
   
-  await new Promise(() => {})
+  //await new Promise(() => {})
   
 });
 
