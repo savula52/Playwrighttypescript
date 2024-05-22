@@ -20,6 +20,7 @@ test('launch github', async ({ page }) => {
   await expect(page).toHaveURL('https://github.com/signup?return_to=https%3A%2F%2Fgithub.com%2Flogin&source=login')
   //await.page.locator('css=#login > div.login-callout.mt-3 > p > a').click()
    await page.screenshot({ path: `gcreateaccount.png` })
+      await page.pause()
   
   //await new Promise(() => {})
   
